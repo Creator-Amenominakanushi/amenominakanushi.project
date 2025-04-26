@@ -1,0 +1,61 @@
+//? Bootstrap Source SASS Files
+@import '~bootstrap/scss/bootstrap';
+//? Custom Re-Usable CSS Functions
+@import './mixins';
+//? Module Styling Components
+@import './modules';
+
+//* HTML | Root
+html {
+  --color-bg2: rgb(0, 17, 82);
+  --color1: 18, 113, 255;
+  --color2: 221, 74, 255;
+  --color3: 100, 220, 255;
+  --color4: 200, 50, 50;
+  --color5: 180, 180, 50;
+  --color-interactive: 140, 100, 255;
+  --circle-size: 90%;
+  --blending: hard-light;
+  --background-light-mode: #F8F9FA;
+  --background-dark-mode:  #000000;
+  --text-light-mode:       #F8F9FA;
+  --text-dark-mode:        #000000;
+  --text-secondary:        #A8AAAC;
+  --text-secondary-p:      #EAEAEA;
+  --tint:                  #0077FF;
+  // --grey-tint:             #333335;
+  // --grey-white:            #B7B8BF;
+  &[data-theme='dark'] {
+    --background-light-mode: #000000;
+    --background-dark-mode:  #F8F9FA;
+    --text-light-mode:       #000000;
+    --text-dark-mode:        #F8F9FA;
+    --text-secondary:        #575A5E;
+    --text-secondary-p:      #1E1E1E;
+  } &.transition, .transition *, .transition *::before, .transition*::after {
+    transition: all 750ms !important;
+    transition-delay: 0 !important;
+  }
+  //* GLOBAL FONT
+  font-family: var(--font-nunito);
+  h1, h2, h3, h4, h5, h6 { font-family: var(--font-roboto); }
+  h1 { @include responsive_h1_fontsize; }
+  body {
+    background-color: var(--background-dark-mode);
+    h1, h2, h3, h4, h5, h6, p, small, span, hr, ol, li, time {
+      color: var(--text-light-mode);
+    }
+  }
+}
+
+//? Animation Keyframes
+@import './animations';
+
+//* Global Theme Preference: Dark
+@media (prefers-color-scheme: dark) {
+  html { color-scheme: dark; }
+  body {
+    background: black;
+    color: white;
+  }
+}

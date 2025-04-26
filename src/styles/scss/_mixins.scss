@@ -1,0 +1,19 @@
+//* NOTE: Mixins - Re-Usable CSS Functions
+@mixin zero_mp {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin center_xy {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin responsive_h1_fontsize {
+    @include media-breakpoint-up(sm) { font-size: 2.5rem; }
+    @include media-breakpoint-up(md) { font-size: 3rem; }
+    @include media-breakpoint-up(lg) { font-size: 4.5rem; }
+    @include media-breakpoint-up(xl) { font-size: 4.6rem; }
+}
