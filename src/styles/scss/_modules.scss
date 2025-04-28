@@ -1,0 +1,119 @@
+//* Custom Button
+.btn-theme {
+  border-radius: 10px;
+  // background-color: rgb(255 255 255 / 19%);
+  // background-color: rgb(28 28 28 / 79%);
+  background-color: rgb(195 195 195 / 26%);
+  color: white ;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(15.6px);
+  -webkit-backdrop-filter: blur(15.6px);
+}
+
+//* Breadcrumb Links
+#breadcrumb-bar {
+  li {
+    &::before { color: var(--text-light-mode); }
+    a {
+      text-decoration: none;
+      color: var(--text-secondary);
+      &:active { color: var(--text-secondary); }
+    }
+  }
+}
+
+//* Feature Blog Card
+.preview-card__container {
+  .img-theme {
+    border: 3px solid black;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    height: auto;
+  }
+  .preview-card__content {
+    // max-width: 350px;
+    padding: .5rem;
+    h2 {
+      margin-top: 0.85rem;
+      margin-bottom: 0.1rem;
+      a {
+        text-decoration: none;
+        color: var(--text-light-mode);
+        font-weight: 650;
+      }
+    }
+    time {
+      margin-bottom: 0.6rem;
+      display: block;
+      color: var(--text-secondary);
+      font-size: 14px;
+    }
+    p { color: var(--text-secondary); }
+  }
+}
+
+//* Blog Post Article
+.display-flex-center__container {
+  // #viewCounter { color: var(--text-secondary); }
+  @include media-breakpoint-up(sm) {
+    display: flex;
+    justify-content: center;
+  }
+  .article__container {
+    max-width: 600px;
+    .article__content {
+      margin-top: 3rem;
+      // padding: .5rem;
+      .img-theme {
+        border: 3px solid black;
+        border-radius: 15px;
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 15px;
+        -ms-border-radius: 15px;
+        -o-border-radius: 15px;
+        height: auto;
+        width: 100%;
+      }
+      h2 {
+        margin-bottom: 1.5rem;
+        font-size: 23px;
+        font-weight: 600;
+        @include media-breakpoint-up(sm) { font-size: 2.5rem; }
+      }
+      h3 {
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+        font-size: 15px;
+        font-weight: 700;
+        @include media-breakpoint-up(sm) { font-size: 1.5rem; }
+        @include media-breakpoint-up(lg) { margin-top: 4rem; }
+      }
+      h4 {
+        margin-top: 1.5rem;
+      }
+      p { 
+        color: var(--text-secondary-p);
+        font-size: 16px; 
+        @include media-breakpoint-up(lg) { font-size: 18px; }
+      }
+      time, span { color: var(--text-secondary); }
+    }
+  }
+}
+
+//* Code Snippet Theme
+figure {
+  pre {
+    margin: 0.85rem 0 0 0;
+    padding: 1rem;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    code { font-size: 13px; }
+  }
+}
