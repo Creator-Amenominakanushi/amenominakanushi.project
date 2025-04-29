@@ -1,6 +1,3 @@
-//? NEXT MODULE
-import Link from "next/link";
-
 const Footer = () => {
 
   //* Variable that stores the values for todays date
