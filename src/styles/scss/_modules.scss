@@ -117,3 +117,15 @@ figure {
     code { font-size: 13px; }
   }
 }
+
+//* Footer
+.footer {
+  text-align: center;
+  padding-top: 3rem;
+  padding: 2rem 0;
+  border-top: 1px solid var(--background-light-mode);
+  small {
+    font-size: 13px;
+    @include media-breakpoint-up(lg) { font-size: 16px; }
+  }
+}

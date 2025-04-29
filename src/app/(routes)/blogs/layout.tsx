@@ -1,4 +1,5 @@
 //? STYLESHEET
+import Footer from "@/app/(custom)/ui/footer";
 import "@/styles/scss/globals.scss";
 
 export default function NextMDXBlogsLayout({
@@ -9,6 +10,7 @@ export default function NextMDXBlogsLayout({
   return (
     <main className="container">
       {children}
+      <Footer />
     </main>
   );
 }
