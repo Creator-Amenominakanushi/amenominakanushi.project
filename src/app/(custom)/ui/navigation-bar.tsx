@@ -11,7 +11,7 @@ import clsx from "clsx";
 //? REACT BOOTSTRAP 
 import { Container, Navbar } from "react-bootstrap";
 //? REACT ICONS
-import { MdAccountCircle, MdToken } from "react-icons/md";
+import { MdAccountCircle } from "react-icons/md";
 import { IoHome } from "react-icons/io5";
 
 //? Objects representing link with its icon.
@@ -49,7 +49,7 @@ export default function NavigationBar() {
           <div className="nav navigation-link__style justify-content-end flex-grow-1 mt-3 mt-md-0">
           {/* Mapping over the links array to render each link */}
           {links.map((link) => {
-            const LinkIcon = link.icon;
+            // const LinkIcon = link.icon;
             return (
               <Link
                 key={link.name} 
