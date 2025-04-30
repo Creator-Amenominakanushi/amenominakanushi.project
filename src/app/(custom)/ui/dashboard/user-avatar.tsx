@@ -2,7 +2,7 @@
 import { auth } from "@/auth";
 import { SessionProvider } from "next-auth/react";
 //? AUTH
-import { SignIn } from "../(custom)/ui/auth-components";
+import { SignIn } from "../auth-components";
 //? SHADCN
 import {
   Avatar,
@@ -36,13 +36,14 @@ export default async function UserAvatar() {
 
   return (
     <SessionProvider session={session}>
-    <Avatar>
-      <AvatarImage src={session.user.image || fallbackUserImg} alt="@Github Avatar" />
-      <AvatarFallback>SN</AvatarFallback>
-    </Avatar>
-      <small>{session.user.id}</small>
-      <h1>{session.user.name}</h1>
-      <p>{session.user.email}</p>
+      <div className="flex flex-row items-center px-2 pt-3 pb-4">
+        <Avatar>
+          <AvatarImage src={session.user.image || fallbackUserImg} alt="@Github Avatar" />
+          <AvatarFallback>SN</AvatarFallback>
+        </Avatar>
+        <span className="mx-2">{session.user.name}</span>
+      </div>
+    {/* <p>{session.user.email}</p> */}
     </SessionProvider>
   );
 }

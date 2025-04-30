@@ -1,10 +1,8 @@
-import UserAvatar from "@/app/(auth)/user-avatar";
-
 export default function DashboardOverviewPage() {
   return (
-    <>
-      <h1>Dashboard Overview</h1>
-      <UserAvatar />
-    </>
+    <div className="mt-5">
+      <small>Version beta.1</small>
+      <h1 className="mb-5">Dashboard Overview</h1>
+    </div>
   );
 }

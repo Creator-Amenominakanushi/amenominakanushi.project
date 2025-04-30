@@ -16,6 +16,7 @@ export function SignIn() {
     >
       <Button 
         type="submit"
+        size="sm"
       > 
         <AiFillGithub /> Sign-in with GitHub
       </Button>
@@ -29,12 +30,13 @@ export function SignOut() {
     <form
       action={async () => {
         "use server";
-        await signOut();
+        await signOut({ redirectTo: "/" });
       }}
     >
       <Button 
         type="submit" 
         variant="destructive"
+        size="sm"
       > 
         Sign Out
       </Button>
